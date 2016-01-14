@@ -39,11 +39,11 @@ class ArticlesController < ApplicationController
         flash.now[:danger] = "Article has not been updated"
         render :edit
       end
-    end  
+    end
   end
 
   def show
-
+    @comment = @article.comments.build
   end
 
   def destroy
